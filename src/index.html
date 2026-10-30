@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Dapur Echa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<style>/*CSS*/</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud">
+  <div id="topL"><div class="badge" id="lvBadge">Dapur Echa</div><div class="badge" id="timer">⏱ 0:00</div><div class="badge" id="custCount">🙂 0/0</div></div>
+  <div id="tickets"></div>
+  <div id="topR"><button id="btnHouse" class="round house-btn" title="Pilih rumah (level)"></button><button id="btnMusic" class="round" title="Musik">🎵</button><button id="btnSfx" class="round" title="Efek suara">🔊</button><button id="btnFull" class="round mob" title="Layar penuh">⛶</button><button id="btnPause" class="round" title="Jeda (Esc)">⏸</button></div>
+  <div id="labels"></div>
+  <div id="cbubbles"></div>
+  <div id="echaBubble"></div>
+  <button id="btnToCounter" class="rot">Kaunter <span>➜</span><small>Spasi / D</small></button>
+  <button id="btnToKitchen" class="rot left"><span>⬅</span> Dapur<small>Spasi / A</small></button>
+  <div id="recipe"></div><button id="btnRecipe" class="mob">📖 Resep</button><div id="selChip"></div>
+  <div id="hint"></div>
+  <div id="panel"></div>
+  <div id="toasts"></div>
+</div>
+<div id="ghost"></div>
+
+<div class="screen on" id="start">
+  <div class="card big">
+    <div class="logo">Dapur <span>Echa</span></div>
+    <p class="sub">Masak makanan Indonesia, layani pelanggan, dan tepuk serangga pengganggu!</p>
+    <div class="how">
+      <div><b>1</b> Lihat pesanan dan resep</div>
+      <div><b>2</b> Klik/tap Kulkas atau Lemari, lalu drag bahan ke alat masak (atau tap bahan, lalu tap alatnya)</div>
+      <div><b>3</b> Drag makanan jadi ke Tray</div>
+      <div><b>4</b> Putar kamera ke kaunter (tombol ➜, Spasi, atau swipe), lalu bawa Tray ke pelanggan</div>
+      <div><b>5</b> Klik/tap serangga untuk menepuknya!</div>
+    </div>
+    <button id="btnStart" class="btn">Mulai Main ▶</button>
+  </div>
+</div>
+<div class="screen" id="map">
+  <div class="card wide">
+    <div class="mh"><h2>Pilih Rumah</h2><button id="mapClose" class="btn sm ghostb">Kembali ✕</button></div>
+    <div id="mapGrid"></div>
+  </div>
+</div>
+<div class="screen" id="pause">
+  <div class="card"><h2>Istirahat dulu</h2><p class="sub">Permainan dijeda.</p>
+    <div class="row"><button id="btnResume" class="btn">Lanjut ▶</button><button id="btnRetry" class="btn alt">Ulangi</button><button id="btnPauseMap" class="btn alt">Peta Rumah</button></div></div>
+</div>
+<div class="screen" id="win">
+  <div class="card">
+    <div class="berhasil">Berhasil!</div>
+    <div id="winStars"></div>
+    <p id="winMsg" class="sub"></p>
+    <div id="winStats"></div>
+    <div class="row"><button id="winNext" class="btn">Rumah Berikutnya ➜</button><button id="winRetry" class="btn alt">Main Lagi</button><button id="winMap" class="btn alt">Peta Rumah</button></div>
+  </div>
+</div>
+<div id="rotateMsg"><div class="phone">📱</div><b>Miringkan HP kamu</b><p>Game ini dimainkan dengan HP posisi mendatar.</p></div>
+<div id="nogl"><div class="card"><h2>Maaf</h2><p class="sub">Browser ini belum mendukung WebGL. Coba buka dengan Chrome atau Edge terbaru.</p></div></div>
+<script>/*JS*/</script>
+</body>
+</html>
